@@ -15,14 +15,39 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <!-- sidebar.css -->
+  <link rel="stylesheet" href="css/simple-sidebar.css">
 
   <style type="text/css">
     p, li, a {
       font-family: 'Source Sans Pro', sans-serif;
       font-size: 14px;
     }
+    h1 {
+      display: inline;
+    }
+   h2 {
+      font-family: 'Source Sans Pro', sans-serif;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: bold;
+   }
     .navbar-header img {
       padding: 10px 0 0 10px;
+    }
+    .navbar-collapse {
+      position: relative;
+    }
+    .navbar-collapse img {
+      margin: 7px;
+      position: relative;    
+    }
+    @media screen and (min-width: 1200px) {
+      .navbar-collapse img {
+        position: absolute;
+        top: 0;
+        left: 45%;
+      }
     }
     .navbar-default .navbar-nav>li>a {
       font-family: 'Source Sans Pro', sans-serif;
@@ -34,13 +59,16 @@
     .navbar-default .navbar-nav ul>li>a {
       font-family: 'Source Sans Pro', sans-serif;
     }
-    #filters .col-xs-12:first-child {
-      padding-left: 25px;
+    .navbar-right a {
+      margin-left: 15px;
     }
     #product-grid {
       margin-bottom: 270px;
+      position: relative;
     }
-
+    #filters {
+      
+    }
     #product-grid div.product {
       min-height: 100px;
       border: 1px solid #c5c5c5;
@@ -118,11 +146,10 @@
                       </ul>
                   </li>
                   <li><a href="#">What's New</a></li>
-                  <li><a href="#">Customize</a></li>
                   <li><a href="#">Find a Dealer</a></li>
               </ul>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Fender_logo.png" class="" width="88" alt="Fender">
-                <form class="navbar-form navbar-left">
+              <h1><img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Fender_logo.png" class="hidden-xs" width="88" alt="Fender" title="Fender"></h1>
+                <form class="navbar-form navbar-right hidden-sm hidden-xs">
                     <div class="form-group">
                       <input type="text" class="form-control" placeholder="Search">
                     </div>
@@ -136,25 +163,110 @@
           </div><!-- /.container -->
         </nav>
     </header>
-    <div id="filters" class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="checkbox">
-          <label>
-            <input id="check-guitars" type="checkbox" value="guitars">Guitars
-          </label>
-        </div>
-        <div class="checkbox">
-          <label>
-            <input id="check-parts" type="checkbox" value="parts">Guitar and Bass Parts
-          </label>
-        </div>
-      </div>
-    </div>
-    </div>
+
 
     <div id="product-grid" class="container">
       <div class="row">
+
+<div id="filters" class="col-xs-12 col-sm-2">
+
+<h2 class="text-uppercase">Filters</h2>
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+   <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+      <h3 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Type
+        </a>
+      </h4>
+      </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <div class="checkbox">
+            <label>
+              <input id="check-guitars" type="checkbox" value="guitars">Guitars
+            </label>
+          </div>
+          <div class="checkbox">
+          <label>
+            <input id="check-parts" type="checkbox" value="parts">Guitar and Bass Parts
+          </label>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h3 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Series
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        <div class="checkbox">
+            <label>
+              <input id="check-Standard" type="checkbox" value="Standard">Standard
+            </label>
+          </div>
+         <div class="checkbox">
+            <label>
+               <input id="check-Artist" type="checkbox" value="Artist">Artist
+            </label>
+         </div>
+         <div class="checkbox">
+            <label>
+               <input id="check-Mounting" type="checkbox" value="Mounting">Mounting Hardware
+            </label>
+         </div>
+         <div class="checkbox">
+            <label>
+               <input id="check-Miscellaneous" type="checkbox" value="Miscellaneous">Miscellaneous Parts
+            </label>
+         </div>
+         <div class="checkbox">
+            <label>
+               <input id="check-Plates" type="checkbox" value="Plates">Plates &amp; Covers
+            </label>
+         </div>
+         <div class="checkbox">
+            <label>
+               <input id="check-Vintage" type="checkbox" value="Vintage">Vintage Modified Models
+            </label>
+         </div>
+         <div class="checkbox">
+            <label>
+               <input id="check-American" type="checkbox" value="American">American Standard
+            </label>
+         </div>
+         <div class="checkbox">
+            <label>
+               <input id="check-Knobs" type="checkbox" value="Knobs">Knobs, Kits &amp; Pickup Covers
+            </label>
+         </div>
+         <div class="checkbox">
+            <label>
+               <input id="check-Pickguards" type="checkbox" value="Pickguards">Pickguards &amp; Backplates
+            </label>
+         </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
+          
+        </div>
+
+
+        <div id="product-grid-display" class="col-xs-12 col-sm-10">
+
+        </div>
+      </div>
+        
         
       </div>
     </div>
@@ -191,89 +303,128 @@
     <!--Bootstrap-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
     <!--script.js-->
-    <script>
-      // displaying products in grid
-      $.ajax({
-        dataType: "json",
-        url: 'products.json',
-        success: function(products) {
-          // var products = products;
-          console.log(products);
-          // var series = products.documents.series;
-          // var products = "";
+<script>
+// displaying products in grid
+$.ajax({
+   dataType: "json",
+   url: 'products.json',
+   success: function(products) {
 
- 
-          $.each(products.documents, function(index,value){
-          
-            // var products = push.index;
-            // console.log(products);
-            // console.log(this.series);
-            var productType = this.productType;
-            var series = this.series;
-            var name = this.productDisplayName_en;
-            // console.log(productType);
-            console.log(series);
-            // console.log("Display Name: "+name);
-            // var products = index.push;
-            // console.log(products);
-            // console.log(guitars);
-            
-            
-              // put products on page
-              if (name !== undefined && productType == "Guitars") {
-                
-                $('#product-grid .row').append('<div class="col-xs-12 col-sm-3"><div class="product guitars">'+name+'</div></div>');
-              } else if (name !== undefined && productType == "Guitar and Bass Parts") {
-                $('#product-grid .row').append('<div class="col-xs-12 col-sm-3"><div class="product parts">'+name+'</div></div>');
-
-              }
-
-              // if (productType = "Guitars"){
-              //     $('.product').addClass('guitars');
-              // } else if (productType = "Guitar and Bass Parts") {
-              //   $('.product').addClass('parts');
-              // } else if (series = "Artist") {
-              //   $('.product').addClass('artist');
-              // }
-                          
-
-          });// each
+// var products = products;
+console.log(products);
+// var series = products.documents.series;
+// var products = "";
 
 
-        } // success function
-      }); // ajax
+$.each(products.documents, function(index,value){
+
+// var products = push.index;
+// console.log(products);
+// console.log(this.series);
+var productType = this.productType;
+var series = this.series;
+var name = this.productDisplayName_en;
+// console.log(productType);
+console.log(series);
+// console.log("Display Name: "+name);
+// var products = index.push;
+// console.log(products);
+// console.log(guitars);
+
+
+// put products on page
+
+
+
+
+if (name !== undefined && productType == "Guitars") {
+
+   $('#product-grid-display').append('<div class="col-xs-12 col-sm-6 col-md-3"><div class="product guitars '+series+'">'+name+'</div></div>').fadeIn('slow');
+
+
+} else if (name !== undefined && productType == "Guitar and Bass Parts") {
+
+   $('#product-grid-display').append('<div class="col-xs-12 col-sm-6 col-md-3"><div class="product parts '+series+'">'+name+'</div></div>').fadeIn('slow');
+
+}
+
+// if (series == "") {
+//    $().text(this.name);.addClassName(series);
+// }  else if (series == "") {
+   
+// }  else if (series == "") {
+   
+// }  else if (series == "") {
+   
+// }  else if (series == "") {
+   
+// }  else if (series == "") {
+   
+// }  else if (series == "") {
+   
+// }  else if (series == "") {
+   
+// }  else if (series == "") {
+
+// }
+
+// if (productType = "Guitars"){
+//     $('.product').addClass('guitars');
+// } else if (productType = "Guitar and Bass Parts") {
+//   $('.product').addClass('parts');
+// } else if (series = "Artist") {
+//   $('.product').addClass('artist');
+// }
+
+
+});// each
+
+
+} // success function
+}); // ajax
 
     
-    $("#filters :checkbox").click(function() {
+   $("#filters :checkbox").click(function() {
+
+      $('#product-grid-display>div').hide();
 
       $("#filters :checkbox:checked").each(function() {
-           $("." + $(this).val()).show();
+           $("." + $(this).val()).parent().show();
        });
 
-        $.ajax({
-          dataType: "json",
-          url: 'products.json',
-          success: function(products) {
+       if ($('#filters :checkbox:checked').length == 0) { 
+         $('.product').parent().fadeIn();  
+}
 
-            $(".product").parent().fadeOut();
+   });        
+
+
+
+
+        // $.ajax({
+        //   dataType: "json",
+        //   url: 'products.json',
+        //   success: function(products) {
+
+        //     $(".product").parent().fadeOut();
                   
-            $.each(products.documents, function(index,value){
+        //     $.each(products.documents, function(index,value){
 
-              var productType = this.productType;
-              var series = this.series;
-              var name = this.productDisplayName_en;
+        //       var productType = this.productType;
+        //       var series = this.series;
+        //       var name = this.productDisplayName_en;
 
             
-              if (productType == "Guitars") {
+        //       if (productType == "Guitars") {
 
-                  $('#product-grid .row').append('<div class="col-xs-12 col-sm-3"><div class="product">'+name+'</div></div>');
-              } 
+        //           $('#product-grid-display').append('<div class="col-xs-12 col-sm-6 col-md-3"><div class="product">'+name+'</div></div>');
+        //       } 
                           
-            });
+        //     });
 
 
-          } // success function
-        }); // ajax
+        //   } // success function
+        // }); // ajax
                  
                 
 
@@ -290,7 +441,7 @@
               
 
 
-              });       
+                     
 
 
       // $('#filters :checkbox').click(function(){
