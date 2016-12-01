@@ -7,3 +7,4 @@
 * Scroll-to-top button
 * Adjust footer for long product scroll
 * Search functioning
+* More thought into UI
