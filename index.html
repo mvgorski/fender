@@ -1,28 +1,22 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Fender Test</title>
   <meta name="description" content="Off the Gnar Radar">
   <meta name="author" content="Matthew Gorski">
-
   <!--Bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
   <!--Font Awesome-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
-
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
-
 <body>
     <header>
         <nav class="navbar navbar-default">
@@ -76,120 +70,109 @@
     </header>
 
 
-    <div id="product-grid" class="container">
-      <div class="row">
+   <div id="product-grid" class="container">
+   <div class="row">
 
-<!-- FILTERS -->
-<div id="filters" class="col-xs-12 col-sm-3">
-
-<h2 class="text-uppercase">Filters</h2>
-
-<button id="view-single" class="btn btn-default hidden-xs"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
-<button id="view-grid" class="btn btn-default hidden-xs"><i class="fa fa-th" aria-hidden="true"></i></button>
-
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-   <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingOne">
-      <h3 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#collapseOne" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-          Type <i class="fa fa-plus" aria-hidden="true"></i>
-        </a>
-      </h3>
+      <!-- FILTERS -->
+      <div id="filters" class="col-xs-12 col-sm-3">
+         <h2 class="text-uppercase">Filters</h2>
+         <!-- view buttons -->
+         <button id="view-single" class="btn btn-default hidden-xs"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+         <button id="view-grid" class="btn btn-default hidden-xs"><i class="fa fa-th" aria-hidden="true"></i></button>
+         <!-- filter panel -->
+         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+               <div class="panel-heading" role="tab" id="headingOne">
+               <h3 class="panel-title">
+                 <a role="button" data-toggle="collapse" data-parent="#collapseOne" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                   Type <i class="fa fa-plus" aria-hidden="true"></i>
+                 </a>
+               </h3>
+               </div>
+               <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+               <div class="panel-body">
+                 <div class="checkbox">
+                     <label>
+                       <input id="check-guitars" type="checkbox" value="guitars">Guitars
+                     </label>
+                   </div>
+                   <div class="checkbox">
+                   <label>
+                     <input id="check-parts" type="checkbox" value="parts">Guitar &amp; Bass Parts
+                   </label>
+                   </div>
+               </div>
+             </div>
+           </div>
+           <div class="panel panel-default">
+             <div class="panel-heading" role="tab" id="headingTwo">
+               <h3 class="panel-title">
+                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#collapseTwo" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                   Series <i class="fa fa-plus" aria-hidden="true"></i>
+                 </a>
+               </h3>
+             </div>
+             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+               <div class="panel-body">
+                 <div class="checkbox">
+                     <label>
+                       <input id="check-Standard" type="checkbox" value="Standard">Standard
+                     </label>
+                   </div>
+                  <div class="checkbox">
+                     <label>
+                        <input id="check-Artist" type="checkbox" value="Artist">Artist
+                     </label>
+                  </div>
+                  <div class="checkbox">
+                     <label>
+                        <input id="check-Mounting" type="checkbox" value="Mounting">Mounting Hardware
+                     </label>
+                  </div>
+                  <div class="checkbox">
+                     <label>
+                        <input id="check-Miscellaneous" type="checkbox" value="Miscellaneous">Miscellaneous Parts
+                     </label>
+                  </div>
+                  <div class="checkbox">
+                     <label>
+                        <input id="check-Plates" type="checkbox" value="Plates">Plates &amp; Covers
+                     </label>
+                  </div>
+                  <div class="checkbox">
+                     <label>
+                        <input id="check-Vintage" type="checkbox" value="Vintage">Vintage Modified Models
+                     </label>
+                  </div>
+                  <div class="checkbox">
+                     <label>
+                        <input id="check-American" type="checkbox" value="American">American Standard
+                     </label>
+                  </div>
+                  <div class="checkbox">
+                     <label>
+                        <input id="check-Knobs" type="checkbox" value="Knobs">Knobs, Kits, &amp; Pickup Covers
+                     </label>
+                  </div>
+                  <div class="checkbox">
+                     <label>
+                        <input id="check-Pickguards" type="checkbox" value="Pickguards">Pickguards &amp; Backplates
+                     </label>
+                  </div>
+               </div>
+             </div>
+           </div>
+         </div>        
       </div>
-    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-        <div class="checkbox">
-            <label>
-              <input id="check-guitars" type="checkbox" value="guitars">Guitars
-            </label>
-          </div>
-          <div class="checkbox">
-          <label>
-            <input id="check-parts" type="checkbox" value="parts">Guitar &amp; Bass Parts
-          </label>
-          </div>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h3 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#collapseTwo" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Series <i class="fa fa-plus" aria-hidden="true"></i>
-        </a>
-      </h3>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        <div class="checkbox">
-            <label>
-              <input id="check-Standard" type="checkbox" value="Standard">Standard
-            </label>
-          </div>
-         <div class="checkbox">
-            <label>
-               <input id="check-Artist" type="checkbox" value="Artist">Artist
-            </label>
-         </div>
-         <div class="checkbox">
-            <label>
-               <input id="check-Mounting" type="checkbox" value="Mounting">Mounting Hardware
-            </label>
-         </div>
-         <div class="checkbox">
-            <label>
-               <input id="check-Miscellaneous" type="checkbox" value="Miscellaneous">Miscellaneous Parts
-            </label>
-         </div>
-         <div class="checkbox">
-            <label>
-               <input id="check-Plates" type="checkbox" value="Plates">Plates &amp; Covers
-            </label>
-         </div>
-         <div class="checkbox">
-            <label>
-               <input id="check-Vintage" type="checkbox" value="Vintage">Vintage Modified Models
-            </label>
-         </div>
-         <div class="checkbox">
-            <label>
-               <input id="check-American" type="checkbox" value="American">American Standard
-            </label>
-         </div>
-         <div class="checkbox">
-            <label>
-               <input id="check-Knobs" type="checkbox" value="Knobs">Knobs, Kits, &amp; Pickup Covers
-            </label>
-         </div>
-         <div class="checkbox">
-            <label>
-               <input id="check-Pickguards" type="checkbox" value="Pickguards">Pickguards &amp; Backplates
-            </label>
-         </div>
 
+      <!-- **** Product Display Grid **** -->
+      <div id="product-grid-display" class="col-xs-12 col-sm-9"></div>
+      
+   </div> <!-- .row -->       
+</div><!-- #product-grid -->
 
-      </div>
-    </div>
-  </div>
-
-</div>
-          
-        </div>
-
-
-        <div id="product-grid-display" class="col-xs-12 col-sm-9">
-
-        </div>
-      </div>
-        
-        
-      </div>
-    </div>
-
-
-
-
-    <footer class="navbar-fixed-bottom">
+   <!-- footer -->
+   <footer class="navbar-fixed-bottom">
       <div class="container">
             <div class="row">
                 <div class="col-xs-12 text-center">
@@ -212,8 +195,9 @@
                 </div>
             </div>
       </div>
-    </footer>
+   </footer>
 
+   <!-- hidden modal -->
     <div id="product-modal" class="modal fade" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -236,125 +220,11 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <!--Bootstrap-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
     <!--script.js-->
-<script>
-// displaying products in grid
-$.ajax({
-   dataType: "json",
-   url: 'products.json',
-   success: function(products) {
-
-      // var products = products;
-      console.log(products);
-      // var series = products.documents.series;
-      // var products = "";
-
-
-      $.each(products.documents, function(index,value){
-
-      // var products = push.index;
-      // console.log(products);
-      // console.log(this.series);
-      var productType = this.productType;
-      var series = this.series;
-      var name = this.productDisplayName_en;
-      var nameSku = this.skuDisplayName_en;
-      // console.log(productType);
-      console.log(series);
-      // console.log("Display Name: "+name);
-      // var products = index.push;
-      // console.log(products);
-      // console.log(guitars);
-
-
-      // put products on page
-
-      if (name !== undefined && productType == "Guitars") {
-
-         $('#product-grid-display').append('<div class="product-outer col-xs-12 col-sm-6 col-md-3"><div class="product guitars '+series+'"><div class="product-title">'+name+'</div><div class="product-sku hidden">'+nameSku+'</div></div></div>').fadeIn('slow');
-
-
-      } else if (name !== undefined && productType == "Guitar and Bass Parts") {
-
-         $('#product-grid-display').append('<div class="product-outer col-xs-12 col-sm-6 col-md-3"><div class="product parts '+series+'"><div class="product-title">'+name+'</div><div class="product-sku hidden">'+nameSku+'</div></div></div>').fadeIn('slow');
-
-      }
-
-
-      });// each
-
-
-
-
-   } // success function
-}); // ajax
-
-    
-   $("#filters :checkbox").click(function() {
-
-      $('#product-grid-display>div').hide();
-
-      $("#filters :checkbox:checked").each(function() {
-           $("." + $(this).val()).parent().show();
-       });
-
-       if ($('#filters :checkbox:checked').length == 0) { 
-         $('.product').parent().fadeIn();  
-      }
-
-   });        
-
-   // function modalShow() {
-
-
-
-
-      $('.col-xs-12').on('click', '.product', function() {
-
-         // var title = this.text();
-         console.log('test');
-
-         $('#product-modal .modal-title').empty();
-
-         // var title = $(this).find('.product').text();
-         var title = $(this).children('.product-title').text();
-         var desc = $(this).children('.product-sku').text();
-         console.log(title);
-
-         $('#product-modal .modal-title').text(title);
-         
-
-         // $('#product-modal .modal-body ul').prepend('<li></li>');
-
-         $('#product-modal ul>li:first-child').text(desc);
-
-
-         $('#product-modal').modal('show');
-
-      });
-
-      $('#view-single').click(function() {
-
-         $('.product-outer').removeClass('col-sm-6 col-md-3');
-
-      });
-
-      $('#view-grid').click(function() {
-
-         $('.product-outer').addClass('col-sm-6 col-md-3');
-
-      });
-
-      $('#filters a').click(function() {
-         $(this).find('i').toggleClass('fa-minus fa-plus')
-      });
-
-
-    </script>
+   <script src="script.js"></script>
 </body>
 </html>
