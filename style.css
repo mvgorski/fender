@@ -1,0 +1,103 @@
+p, li, a {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 14px;
+    }
+    h1 {
+      display: inline;
+    }
+   h2 {
+      font-family: 'Source Sans Pro', sans-serif;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 22px;
+   }
+    .navbar-header img {
+      padding: 10px 0 0 10px;
+    }
+    .navbar-collapse {
+      position: relative;
+    }
+    .navbar-collapse img {
+      margin: 7px;
+      position: relative;    
+    }
+    @media screen and (min-width: 1200px) {
+      .navbar-collapse img {
+        position: absolute;
+        top: 0;
+        left: 45%;
+      }
+    }
+    .navbar-default .navbar-nav>li>a {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 12px;
+      color: #888;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .navbar-default .navbar-nav ul>li>a {
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+    .navbar-right a {
+      margin-left: 15px;
+    }
+    #product-grid {
+      margin-bottom: 270px;
+      position: relative;
+      padding-top: 20px;
+    }
+    #filters i {
+      float: right;
+    }
+    #filters button {
+      float: right;
+      margin-left: 10px;
+    }
+    #filters .checkbox label {
+      font-size: 14px;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+    #filters h3>a {
+      display: block;
+    }
+    #product-grid div.product {
+      min-height: 100px;
+      border: 1px solid #c5c5c5;
+      border-radius: 4px;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+      background: #fdd5d5;
+    }
+    .product:hover,.product:focus {
+      cursor: pointer;
+    }
+    footer {
+      background: #f9f9f9;
+      border-top: 1px solid #c5c5c5;
+      padding-top: 20px;
+      padding-bottom: 25px;
+      color: #888;
+    }
+    footer img {
+      margin-bottom: 20px;
+    }
+    footer p, footer a {
+      font-size: 14px;
+    }
+    footer ul {
+      text-align: right;
+    }
+    @media screen and (max-width: 767px) {
+      footer ul {text-align: left;}
+      footer.navbar-fixed-bottom {position:relative;}
+    }
+    footer ul li {
+      line-height: 1.2;
+    }
+   #product-modal ul {
+      margin-top: 15px;
+   }

@@ -15,119 +15,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-  <!-- sidebar.css -->
-  <link rel="stylesheet" href="css/simple-sidebar.css">
 
-  <style type="text/css">
-    p, li, a {
-      font-family: 'Source Sans Pro', sans-serif;
-      font-size: 14px;
-    }
-    h1 {
-      display: inline;
-    }
-   h2 {
-      font-family: 'Source Sans Pro', sans-serif;
-      text-transform: uppercase;
-      font-size: 16px;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 0;
-      margin-bottom: 22px;
-   }
-    .navbar-header img {
-      padding: 10px 0 0 10px;
-    }
-    .navbar-collapse {
-      position: relative;
-    }
-    .navbar-collapse img {
-      margin: 7px;
-      position: relative;    
-    }
-    @media screen and (min-width: 1200px) {
-      .navbar-collapse img {
-        position: absolute;
-        top: 0;
-        left: 45%;
-      }
-    }
-    .navbar-default .navbar-nav>li>a {
-      font-family: 'Source Sans Pro', sans-serif;
-      font-size: 12px;
-      color: #888;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    .navbar-default .navbar-nav ul>li>a {
-      font-family: 'Source Sans Pro', sans-serif;
-    }
-    .navbar-right a {
-      margin-left: 15px;
-    }
-    #product-grid {
-      margin-bottom: 270px;
-      position: relative;
-      padding-top: 20px;
-    }
-    #filters {
-      
-    }
-    #filters i {
-      float: right;
-    }
-    #filters button {
-      float: right;
-      margin-left: 10px;
-    }
-    #filters .checkbox label {
-      font-size: 14px;
-      font-family: 'Source Sans Pro', sans-serif;
-    }
-    #filters h3>a {
-      display: block;
-    }
-    #product-grid div.product {
-      min-height: 100px;
-      border: 1px solid #c5c5c5;
-      border-radius: 4px;
-      margin: 10px;
-      padding: 10px;
-      text-align: center;
-      background: #fdd5d5;
-    }
-    .product:hover,.product:focus {
-      cursor: pointer;
-    }
-    footer {
-      background: #f9f9f9;
-      border-top: 1px solid #c5c5c5;
-      padding-top: 20px;
-      padding-bottom: 25px;
-      color: #888;
-
-    }
-    footer img {
-      margin-bottom: 20px;
-    }
-    footer p, footer a {
-      font-size: 14px;
-    }
-    footer ul {
-      text-align: right;
-    }
-    @media screen and (max-width: 767px) {
-      footer ul {text-align: left;}
-      footer.navbar-fixed-bottom {position:relative;}
-    }
-    footer ul li {
-      line-height: 1.2;
-    }
-   #product-modal ul {
-      margin-top: 15px;
-   }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -152,7 +41,6 @@
             
             <!-- desktop -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
               <ul class="nav navbar-nav">
                   <li class=""><a href="#">Home</a></li>
                   <li class="dropdown">
@@ -196,6 +84,8 @@
 
 <h2 class="text-uppercase">Filters</h2>
 
+<button id="view-single" class="btn btn-default hidden-xs"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+<button id="view-grid" class="btn btn-default hidden-xs"><i class="fa fa-th" aria-hidden="true"></i></button>
 
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
    <div class="panel panel-default">
@@ -392,10 +282,14 @@ $.ajax({
       } else if (name !== undefined && productType == "Guitar and Bass Parts") {
 
          $('#product-grid-display').append('<div class="product-outer col-xs-12 col-sm-6 col-md-3"><div class="product parts '+series+'"><div class="product-title">'+name+'</div><div class="product-sku hidden">'+nameSku+'</div></div></div>').fadeIn('slow');
+
       }
 
 
       });// each
+
+
+
 
    } // success function
 }); // ajax
@@ -415,7 +309,51 @@ $.ajax({
 
    });        
 
-   // function modalShow() {  
+   // function modalShow() {
+
+
+
+
+      $('.col-xs-12').on('click', '.product', function() {
+
+         // var title = this.text();
+         console.log('test');
+
+         $('#product-modal .modal-title').empty();
+
+         // var title = $(this).find('.product').text();
+         var title = $(this).children('.product-title').text();
+         var desc = $(this).children('.product-sku').text();
+         console.log(title);
+
+         $('#product-modal .modal-title').text(title);
+         
+
+         // $('#product-modal .modal-body ul').prepend('<li></li>');
+
+         $('#product-modal ul>li:first-child').text(desc);
+
+
+         $('#product-modal').modal('show');
+
+      });
+
+      $('#view-single').click(function() {
+
+         $('.product-outer').removeClass('col-sm-6 col-md-3');
+
+      });
+
+      $('#view-grid').click(function() {
+
+         $('.product-outer').addClass('col-sm-6 col-md-3');
+
+      });
+
+      $('#filters a').click(function() {
+         $(this).find('i').toggleClass('fa-minus fa-plus')
+      });
+
 
     </script>
 </body>
