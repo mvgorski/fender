@@ -1,6 +1,6 @@
 # Fender
-## Web App of Products
+*Web App of Products*
 
-## Things I would change if more given more time
+## Things I would change if given more time
 * scroll-to-top button
 * Adjust footer for long product scroll
