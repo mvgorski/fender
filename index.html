@@ -1,0 +1,331 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Fender Test</title>
+  <meta name="description" content="Off the Gnar Radar">
+  <meta name="author" content="Matthew Gorski">
+
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+
+  <style type="text/css">
+    p, li, a {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 14px;
+    }
+    .navbar-header img {
+      padding: 10px 0 0 10px;
+    }
+    .navbar-default .navbar-nav>li>a {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 12px;
+      color: #888;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .navbar-default .navbar-nav ul>li>a {
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+    #filters .col-xs-12:first-child {
+      padding-left: 25px;
+    }
+    #product-grid {
+      margin-bottom: 270px;
+    }
+
+    #product-grid div.product {
+      min-height: 100px;
+      border: 1px solid #c5c5c5;
+      border-radius: 4px;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+      background: #fdd5d5;
+    }
+    footer {
+      background: #f9f9f9;
+      border-top: 1px solid #c5c5c5;
+      padding-top: 20px;
+      padding-bottom: 25px;
+      color: #888;
+
+    }
+    footer img {
+      margin-bottom: 20px;
+    }
+    footer p, footer a {
+      font-size: 14px;
+    }
+    footer ul {
+      text-align: right;
+    }
+    @media screen and (max-width: 767px) {
+      footer ul {text-align: left;}
+      footer.navbar-fixed-bottom {position:relative;}
+    }
+    footer ul li {
+      line-height: 1.2;
+    }
+
+
+  </style>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+          <div class="container">
+            
+            <!-- mobile -->
+            <div class="navbar-header">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Fender_logo.png" class="pull-left visible-xs-inline" width="88" alt="Fender">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            
+            <!-- desktop -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+              <ul class="nav navbar-nav">
+                  <li class=""><a href="#">Home</a></li>
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="#">Guitars</a></li>
+                          <li><a href="#">Bass</a></li>
+                          <li><a href="#">Acoustic</a></li>
+                          <li><a href="#">Guitar Amps</a></li>
+                          <li><a href="#">Bass Amps</a></li>
+                          <li><a href="#">Audio</a></li>
+                          <li><a href="#">Parts</a></li>
+                          <li><a href="#">Accessories</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">What's New</a></li>
+                  <li><a href="#">Customize</a></li>
+                  <li><a href="#">Find a Dealer</a></li>
+              </ul>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Fender_logo.png" class="" width="88" alt="Fender">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <a href="tel:1-844-202-0924" class="">
+                      <i class="fa fa-phone" aria-hidden="true"></i>  1-844-202-0924
+                    </a>
+                </form>
+
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+        </nav>
+    </header>
+    <div id="filters" class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="checkbox">
+          <label>
+            <input id="check-guitars" type="checkbox" value="guitars">Guitars
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input id="check-parts" type="checkbox" value="parts">Guitar and Bass Parts
+          </label>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div id="product-grid" class="container">
+      <div class="row">
+        
+      </div>
+    </div>
+
+
+
+
+    <footer class="navbar-fixed-bottom">
+      <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Fender_logo.png" class="" width="173" alt="Fender">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-offset-2 col-sm-4">
+                    <p class="">Copyright ©2016.
+                    <br>Fender Musical Instruments Corporation.
+                    <br>All Rights Reserved.<br>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.fender.com/pages/privacy">Privacy Policy</a></li>
+                        <li><a href="https://www.fender.com/pages/terms-of-use">Terms &amp; Conditions</a></li>
+                        <li><a href="https://www.fender.com/pages/supply-chain-transparency">Supply Chain Transparency</a></li>
+                    </ul>
+                </div>
+            </div>
+      </div>
+    </footer>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--Bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <!--script.js-->
+    <script>
+      // displaying products in grid
+      $.ajax({
+        dataType: "json",
+        url: 'products.json',
+        success: function(products) {
+          // var products = products;
+          console.log(products);
+          // var series = products.documents.series;
+          // var products = "";
+
+ 
+          $.each(products.documents, function(index,value){
+          
+            // var products = push.index;
+            // console.log(products);
+            // console.log(this.series);
+            var productType = this.productType;
+            var series = this.series;
+            var name = this.productDisplayName_en;
+            // console.log(productType);
+            console.log(series);
+            // console.log("Display Name: "+name);
+            // var products = index.push;
+            // console.log(products);
+            // console.log(guitars);
+            
+            
+              // put products on page
+              if (name !== undefined && productType == "Guitars") {
+                
+                $('#product-grid .row').append('<div class="col-xs-12 col-sm-3"><div class="product guitars">'+name+'</div></div>');
+              } else if (name !== undefined && productType == "Guitar and Bass Parts") {
+                $('#product-grid .row').append('<div class="col-xs-12 col-sm-3"><div class="product parts">'+name+'</div></div>');
+
+              }
+
+              // if (productType = "Guitars"){
+              //     $('.product').addClass('guitars');
+              // } else if (productType = "Guitar and Bass Parts") {
+              //   $('.product').addClass('parts');
+              // } else if (series = "Artist") {
+              //   $('.product').addClass('artist');
+              // }
+                          
+
+          });// each
+
+
+        } // success function
+      }); // ajax
+
+    
+    $("#filters :checkbox").click(function() {
+
+      $("#filters :checkbox:checked").each(function() {
+           $("." + $(this).val()).show();
+       });
+
+        $.ajax({
+          dataType: "json",
+          url: 'products.json',
+          success: function(products) {
+
+            $(".product").parent().fadeOut();
+                  
+            $.each(products.documents, function(index,value){
+
+              var productType = this.productType;
+              var series = this.series;
+              var name = this.productDisplayName_en;
+
+            
+              if (productType == "Guitars") {
+
+                  $('#product-grid .row').append('<div class="col-xs-12 col-sm-3"><div class="product">'+name+'</div></div>');
+              } 
+                          
+            });
+
+
+          } // success function
+        }); // ajax
+                 
+                
+
+
+                 // var guitars = $.grep(products, function (element, index) {
+                 //        return element.prodTypeId == "guitars";
+                 //        });
+                 // console.log(guitars);
+
+
+                 // $("#filters :checkbox:checked").each(function() {
+                 //     $(this).val().show();
+                 // });
+              
+
+
+              });       
+
+
+      // $('#filters :checkbox').click(function(){
+      //     console.log('clicked');
+      //     $.ajax({
+      //       dataType: "json",
+      //       url: 'products.json',
+      //       success: function(products) {
+      //         console.log(products);
+
+
+          
+      //         $.each(products.documents, function(index,value){
+                
+      //           var prodType = this.prodTypeId;
+      //           var series = this.series;
+      //           var name = this.productDisplayName_en;
+
+      //             if (prodType !== "guitars") {
+      //               // var addProduct = $('#product-grid .row').append('<div class="col-xs-12 col-sm-3"><div class="product">'+name+'</div></div>');
+      //               $('#product-grid .row').children().remove();
+      //               $('#product-grid .row').append('<div class="col-xs-12 col-sm-3"><div class="product">'+name+'</div></div>');
+      //             } 
+      //         });
+
+
+      //       } // success function
+      //     }); // ajax
+
+      // }); // guitars click
+
+
+   
+  
+
+    </script>
+</body>
+</html>
