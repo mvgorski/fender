@@ -1,5 +1,7 @@
 # Fender
 *Web App of Products*
+* AJAX / JSON filtered with jQuery
+* Bootstrap modal on product click
 
 [Live Preview](http://mvgorski.com/fender/index.html)
 
